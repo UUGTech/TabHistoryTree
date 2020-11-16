@@ -1,0 +1,34 @@
+{
+    "name": "Tab History Tree",
+    "version": "1.0",
+    "description": "This extension",
+    "permissions": ["tabs", "contextMenus", "declarativeContent", "<all_urls>", "storage"],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts":[{
+        "matches":["<all_urls>"],
+        "js":[
+          "jquery-3.5.1.min.js",
+          "content.js"
+        ]
+    }],
+    "manifest_version": 2,
+    "commands": {
+        "display_tree": {
+          "suggested_key": {
+            "default": "Ctrl+Q",
+            "mac": "MacCtrl+Q"
+          },
+          "description": "Display hisotry tree"
+        },
+        "go_up": {
+          "suggested_key": {
+            "default": "Ctrl+Shift+A",
+            "mac": "MacCtrl+Shift+A"
+          },
+          "description": "Go up on the tree"
+        }
+    }
+}
