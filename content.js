@@ -37,6 +37,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
             $(".UUGTech-link").css({
                 "color":"#0366d6",
                 "text-decoration":"none",
+                "display":"inline",
             });
             $(".UUGTech-link").hover(function(){
                 $(this).css("text-decoration","underline");
